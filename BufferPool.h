@@ -4,10 +4,11 @@
 
 #include <pthread.h>
 #include <stdlib.h>
+#include <assert.h>
 
 typedef unsigned int UINT;
 
-struct Node
+typedef struct Node
 {
   char name[10];
   UINT score;
@@ -22,7 +23,7 @@ private:
   UINT m_uMaxBufferNum;
   UINT m_uCurBusyBufferNum;
   Pnode m_pHead;
-  Pnode m_pDestroyNode;
+  Pnode m_pDestroyHead;
   pthread_mutex_t m_mutex;
   pthread_cond_t m_cond;
 public:
