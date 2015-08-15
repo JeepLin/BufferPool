@@ -16,7 +16,7 @@ BufferPool::BufferPool(UINT uNum)
     
     for(UINT num= 0; num< uNum-1; num++)
     {
-      m_pHead[num]->next= &m_pHead[num+ 1];    
+      m_pHead[num].next= &m_pHead[num+ 1];    
     }
   }
   
